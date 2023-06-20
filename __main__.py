@@ -462,15 +462,15 @@ def draw_graph(linear_y_axis: list, x_axis, y_axis, data) -> None:
     draw_graph function is used to plot the graph on application
     """
 
-    tfig = figure()
-    padding = (80 - len(graph_title_var.get())) // 2
-    print(F_RED + S_BRIGHT + " " * padding + graph_title_var.get())
+    # tfig = figure()
+    # padding = (80 - len(graph_title_var.get())) // 2
+    # print(F_RED + S_BRIGHT + " " * padding + graph_title_var.get())
 
-    tfig.plot(data["sl.no"], data["price"])
+    # tfig.plot(data["sl.no"], data["price"])
     # tfig.plot(data["sl.no"], linear_y_axis)
-    tfig.show()
+    # tfig.show()
 
-    print(F_BLUE + "=" * 80)
+    # print(F_BLUE + "=" * 80)
 
     if choice.get() == 1:
         graph_title_var.set(value="USD/INR Exchange Rates Prediction")
@@ -1433,11 +1433,11 @@ try:
     )
     from sklearn.linear_model import LinearRegression
 
-    print(
-        f"[{F_GREEN}{S_BRIGHT}INFO{S_RESET_ALL}]\t[{F_BLUE}{S_BRIGHT}{datetime.now()}"
-        f"{S_RESET_ALL}]\t{S_BRIGHT}Importing termplotlib, Please wait...{S_RESET_ALL}"
-    )
-    from termplotlib import figure
+    # print(
+    #     f"[{F_GREEN}{S_BRIGHT}INFO{S_RESET_ALL}]\t[{F_BLUE}{S_BRIGHT}{datetime.now()}"
+    #     f"{S_RESET_ALL}]\t{S_BRIGHT}Importing termplotlib, Please wait...{S_RESET_ALL}"
+    # )
+    # from termplotlib import figure
 
     print(
         f"[{F_GREEN}{S_BRIGHT}INFO{S_RESET_ALL}]\t[{F_BLUE}{S_BRIGHT}{datetime.now()}"
@@ -1488,7 +1488,7 @@ try:
             check_hash(path=join(base_path, _[1]), hash_val=_[0])
 
     app: CTk = CTk()
-    app.withdraw()
+    # app.withdraw()
 
     print(
         f"[{F_GREEN}{S_BRIGHT}INFO{S_RESET_ALL}]\t[{F_BLUE}{S_BRIGHT}{datetime.now()}"
@@ -2680,7 +2680,7 @@ try:
     toggle_grid_lines()
     configure_theme_color()
 
-    app.deiconify()
+    # app.deiconify()
 
     play(path=join(base_path, "./mp3/click-124467.mp3"))
 
