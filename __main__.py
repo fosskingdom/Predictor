@@ -547,10 +547,11 @@ def display_data(date_list, ndigits) -> None:
         f"{S_BRIGHT}Intercept (b): {round(number=intercept_var.get(), ndigits=ndigits)}"
     )
     intercept_lbl.configure(text=round(number=intercept_var.get(), ndigits=ndigits))
-    update_progress_bar(var=)
+    update_progress_bar(var=0.42)
 
     print(f"{S_BRIGHT}Accuracy: {round(number=accuracy_var.get(), ndigits=2)}%")
     accuracy_lbl.configure(text=f"{round(number=accuracy_var.get(), ndigits=2)}%")
+    update_progress_bar(var=0.49)
 
     print(
         f"{S_BRIGHT}Tomorrow expected: {round(number=tomorrow_var.get(), ndigits=ndigits)}"
@@ -558,6 +559,7 @@ def display_data(date_list, ndigits) -> None:
     tomorrow_lbl.configure(
         text=f"₹ {round(number=tomorrow_var.get(), ndigits=ndigits)}"
     )
+    update_progress_bar(var=0.56)
 
     print(
         f"{S_BRIGHT}Next week expected: {round(number=next_week_var.get(), ndigits=ndigits)}"
@@ -565,6 +567,7 @@ def display_data(date_list, ndigits) -> None:
     next_week_lbl.configure(
         text=f"₹ {round(number=next_week_var.get(), ndigits=ndigits)}"
     )
+    update_progress_bar(var=0.63)
 
     print(
         f"{S_BRIGHT}Next month expected: {round(number=next_month_var.get(), ndigits=ndigits)}"
@@ -572,6 +575,7 @@ def display_data(date_list, ndigits) -> None:
     next_month_lbl.configure(
         text=f"₹ {round(number=next_month_var.get(), ndigits=ndigits)}"
     )
+    update_progress_bar(var=0.7)
 
     print(
         f"{S_BRIGHT}Next year expected: {round(number=next_year_var.get(), ndigits=ndigits)}"
@@ -579,6 +583,7 @@ def display_data(date_list, ndigits) -> None:
     next_year_lbl.configure(
         text=f"₹ {round(number=next_year_var.get(), ndigits=ndigits)}"
     )
+    update_progress_bar(var=0.77)
 
     if coef_var.get() < 0:
         print(f"{S_BRIGHT}Status: BEAR {DOWN_ARROW}")
@@ -592,9 +597,12 @@ def display_data(date_list, ndigits) -> None:
         print(f"{S_BRIGHT}Status: No Change")
         stat_lbl.configure(text="No Change", text_color=ORANGE)
 
+    update_progress_bar(var=0.84)
+
     last_updated_date: str = list(date_list)[-1]
     print(f"{S_BRIGHT}Last updated: {last_updated_date}")
     last_update_lbl.configure(text=last_updated_date)
+    update_progress_bar(var=0.91)
 
     print(F_BLUE + "=" * 80)
 
@@ -617,7 +625,7 @@ def display_data(date_list, ndigits) -> None:
             ),
         )
 
-    update_progress_bar(var=0.5)
+    update_progress_bar(var=1)
 
     app.update()
 
@@ -705,8 +713,6 @@ def display_info() -> None:
 
     for _ in ["<Control-C>", "<Control-c>"]:
         txt_box.bind(_, lambda event: copy_to_clipboard())
-
-    update_progress_bar(var=1)
 
     app.update()
 
